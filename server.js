@@ -23,21 +23,12 @@ const corsOptions ={
 }
 
 
-const authenticateToken = require('./middleware/authenticateToken');
-
 
 // Init Middleware
 app.use(cors(corsOptions))
 app.use(express.json());
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true }));
-
-
-
-//authenticted route
-app.get('/secret', authenticateToken, async(req,res) => {
-  res.json({data: `Welcome address ${req.authData.verifiedAddress}`})
-})    
 
 
 app.get('/', (req,res) => {
