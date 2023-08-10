@@ -1,4 +1,4 @@
-# Arc: The ultimate no-code platform
+# Arc: The ultimate no-code platform (Backend)
 
 
 ## **Introduction**
